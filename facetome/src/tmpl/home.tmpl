@@ -1,0 +1,26 @@
+{>base/}
+
+{<content}
+    <h1>{content.heading}</h1>
+    <p>
+    	{content.firstp}
+    </p>
+    <p>{content.link}</p>
+    {#content.images}
+        {.}
+    {/content.images}
+
+    <script>
+	var swapEl = document.getElementById("swap");
+	var images = document.getElementsByTagName("img");
+	swapEl.onclick = function(event) {
+	    for (var i=0; i<images.length; i++) {
+                images[i].setAttribute("tmp-src", images[i].getAttribute("src"));
+		images[i].setAttribute("src", images[i].getAttribute("old-src"));
+		images[i].setAttribute("old-src", images[i].getAttribute("tmp-src"));
+            }
+            event.preventDefault();
+        }
+    </script>
+ 
+{/content}

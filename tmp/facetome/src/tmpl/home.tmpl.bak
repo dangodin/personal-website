@@ -1,0 +1,13 @@
+{>base/}
+
+{<content}
+    <h1>{content.heading}</h1>
+    <p>
+    	{content.firstp}
+    </p>
+    <p><a>{content.link}</a></p>
+    {#content.images}
+        <img>{.}</img>
+    {/content.images}
+    
+{/content}

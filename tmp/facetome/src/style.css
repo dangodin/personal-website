@@ -1,0 +1,45 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+	font: normal 1em "Helvetica Neue", sans-serif;
+	color: #15191A;
+	background: #eaecec;
+	text-align: center;
+	margin: 0;
+	padding: 10px 40px;
+	width: 240px;
+}
+h1 {
+	font-size: 1.6em;
+}
+h2 {
+	font-size: 1em;
+	font-weight: normal;
+}
+.extract {
+	font-weight: bold;
+	padding: 10px;
+	margin: 20px;
+	background: #fff;
+	border: solid 1px #d7dcdd;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px #d7dcdd;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btn {
+	display: inline-block;
+	padding: 14px 24px;
+	border-width: 1px;
+	border-radius:8px;
+	font-size: 22px;
+	color: rgb(51, 51, 51);
+	background-image: linear-gradient(to bottom, rgb(98, 196, 98), rgb(81, 163, 81));
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<script>
+	(function(window, document, mjs) {
+
+		window.Mobify = {points: [+new Date], tagVersion: [1, 0]};
+
+		var isMobile = /ip(hone|od|ad)|android|blackberry.*applewebkit|bb1\d.*mobile/i.test(navigator.userAgent);
+		var optedOut = /mobify-path=($|;)/.test(document.cookie);
+
+		if (!isMobile || optedOut) {
+    		return;
+		}
+
+		document.write('<plaintext style="display:none">');
+
+		setTimeout(function() {
+    		var mobifyjs = document.createElement('script');
+    		var script = document.getElementsByTagName('script')[0];
+
+    		mobifyjs.src = mjs;
+    		script.parentNode.insertBefore(mobifyjs, script);
+		});
+
+	})(this, document, 'http://dangodin.dyndns.org:8080/mobify.js');
+	</script>
+	<meta charset="UTF-8">
+
+    <!-- END MOBIFY TAG -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+    <title>Grumpy Dan example</title>
+</head>
+
+<body>
+<div class="example">
+	<h1>Welcome to my FaceTome</h1>
+    <p>The original images were swapped out for a couple of grumpy Dans.<br>
+    No loading of the original images. No data-src tricks.<br>
+    That's optimization, baby!</p>
+    <p><a class="btn" href="#" id="swap">Swap Images</a></p>
+    <div class="img">
+        <img old-src="/img/steakyum.jpg" src="/img/grumpydan.jpg" width="100%">
+    </div>
+    <div class="img">
+    	<img old-src="/img/zoolander.jpg" src="/img/grumpydan.jpg" width="100%">
+    </div>
+
+</div>
+<script>
+// Grab the total time since starting capturing and send it
+// to the parent for testing in performance.html
+var end = +new Date;
+var begin;
+if (window.Mobify && window.Mobify.points) {
+    begin = window.Mobify.points[0];
+} else {
+    var pointEl = document.getElementById("mobify-point");
+    if (pointEl) {
+        begin = pointEl.innerText || pointEl.textContent;
+    }
+}
+var diff = end - begin;
+parent.postMessage(diff, "*");
+</script>
+<script>
+	var swapEl = document.getElementById("swap");
+	var images = document.getElementsByTagName("img");
+	swapEl.onclick = function(event) {
+		for (var i=0; i<images.length; i++) {
+				images[i].setAttribute("tmp-src", images[i].getAttribute("src"));
+				images[i].setAttribute("src", images[i].getAttribute("old-src"));
+				images[i].setAttribute("old-src", images[i].getAttribute("tmp-src"));
+		}
+		event.preventDefault();
+	}
+</script>
+
+
+</body>
+</html>

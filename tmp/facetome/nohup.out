@@ -1,0 +1,34 @@
+Running Preview at address 0.0.0.0 and port 8080
+Press <CTRL-C> to terminate.
+GET /mobify.js 200 - - 5193 ms
+GET /style.css 200 - - 30 ms
+GET /mobify.js 200 - - 4887 ms
+GET /style.css 200 - - 13 ms
+GET /style.css 200 - - 22 ms
+GET /mobify.js 200 - - 4751 ms
+GET /style.css 200 - - 15 ms
+GET /mobify.js 200 - - 4745 ms
+GET /style.css 200 - - 17 ms
+Running Preview at address 0.0.0.0 and port 8080
+Press <CTRL-C> to terminate.
+GET /mobify.js 200 - - 5254 ms
+GET /style.css 200 - - 28 ms
+GET /mobify.js 200 - - 4927 ms
+GET /mobify.js 200 - - 4929 ms
+GET /style.css 200 - - 3059 ms
+GET /mobify.js 200 - - 4355 ms
+GET /style.css 200 - - 2705 ms
+GET /style.css 200 - - 12 ms
+GET /mobify.js 200 - - 4923 ms
+GET /style.css 200 - - 26 ms
+GET /mobify.js 200 - - 4801 ms
+GET /style.css 200 - - 17 ms
+GET /mobify.js 200 - - 4899 ms
+GET /style.css 200 - - 17 ms
+GET /HNAP1/ 404 - - 16 ms
+GET /HNAP1/ 404 - - 15 ms
+GET /manager/html 404 - - 16 ms
+GET /mobify.js 200 - - 4793 ms
+GET /style.css 200 - - 16 ms
+GET / 200 - - 19 ms
+GET /robots.txt 404 - - 11 ms

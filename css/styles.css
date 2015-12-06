@@ -1,0 +1,78 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 16px;  
+	font-family: 'Maven Pro', sans-serif;
+	line-height: 1.52;
+}
+
+h1, h2, h3 {
+	font-family: 'Maven Pro', sans-serif;
+	line-height: 40px;	
+}
+
+/* Put space between sections */
+.body-section {
+  padding-top: 30px;
+}
+
+/* Highlight social media icons on hover. */
+img.social {
+	height: 20px;
+	opacity:0.8;filter:alpha(opacity=95);
+}
+
+img.social:hover {
+	opacity:1.0;filter:alpha(opacity=100);
+}
+
+/* Size the frontpage headshot */
+img.img-headshot {
+	width: 350px;
+}
+
+/* Size and layout */
+img.img-project {
+	width: 175px;
+	vertical-align: middle;
+}
+
+/* Override navbar-brand */
+.navbar .navbar-brand {
+	color: white;
+	font-size: 25px;
+}
+
+/* Add some extra padding between about me paragraphs */
+div.aboutme {
+	margin-bottom: 15px;
+}
+
+hr.content-divider {
+  margin: 30px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Use jumbotron size text for page headers */
+.page-header h1 {
+	font-size: 63px;
+	padding-bottom: 10px;
+}
+
+/* Experience page formatting
+------------------------- */
+
+h1.experience-heading {
+	font-size: 40px;
+}
+
+h2.experience-heading {
+	font-size: 35px;
+}
+
+/* Thin out the marketing headings */
+.experience-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}

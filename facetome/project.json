@@ -1,0 +1,10 @@
+{
+    "name": "facetome",
+    "api": "1.1",
+    "source_directory": "src",
+    "build_directory": "bld",
+    "plugins": [],
+    "exclude": [
+        "*.tmpl"
+    ]
+}
